@@ -20,6 +20,8 @@ namespace SalesWebMvc.Controllers
 
         public IActionResult Privacy()
         {
+
+            ViewData["email"] = "nelio@gmail.com";
             return View();
         }
 
