@@ -10,9 +10,8 @@
         {
         }
 
-        public Department(int id, string name)
+        public Department( string name)
         {
-            Id = id;
             Name = name;
         }
 
@@ -23,7 +22,7 @@
 
         public double TotalSales(DateTime initial, DateTime final)
         {
-            return Sellers.Sum(x => x.TotalSales(initial, final));
+            return Sellers.Sum(seller => seller.TotalSales(initial, final));
         }
     }
 }
