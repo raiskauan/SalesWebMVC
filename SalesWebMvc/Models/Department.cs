@@ -10,7 +10,7 @@
         {
         }
 
-        public Department( string name)
+        public Department(string name)
         {
             Name = name;
         }

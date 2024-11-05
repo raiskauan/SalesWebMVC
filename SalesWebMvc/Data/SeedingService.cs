@@ -19,9 +19,9 @@ public class SeedingService
             return; // DB has been seeded
         }
 
-        Department d1 = new Department("Computers");
-            Department d2 = new Department( "Electronics");
-            Department d3 = new Department( "Fashion");
+            Department d1 = new Department("Computers");
+            Department d2 = new Department("Electronics");
+            Department d3 = new Department("Fashion");
             Department d4 = new Department("Books");
 
             Seller s1 = new Seller( "Bob Brown", "bob@gmail.com", new DateTime(1998, 4, 21), 1000.0, d1);
