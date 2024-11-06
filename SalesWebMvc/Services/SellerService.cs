@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.JSInterop.Implementation;
 using SalesWebMvc.Data;
 using SalesWebMvc.Models;
 
@@ -25,7 +27,8 @@ public class SellerService
 
     public Seller FindById(int id)
     {
-        return _context.Seller.FirstOrDefault(obj => obj.Id == id);
+        // "Include" para fazer o Inner Join com a tabela Seller e a Tabela Department para depois puxar o Id
+        return _context.Seller.Include(obj => obj.Department).FirstOrDefault(obj => obj.Id == id);
     }
 
     public void Remove(int id)
